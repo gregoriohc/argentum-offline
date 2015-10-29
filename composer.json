@@ -1,0 +1,24 @@
+{
+    "name": "gregoriohc/argentum-offline",
+    "description": "Offline driver for the Argentum PHP electronic documents processing library",
+    "license": "MIT",
+    "keywords": ["billing", "invoicing", "offline"],
+    "authors": [
+        {
+            "name": "Gregorio Hernandez Caso",
+            "email": "gregoriohc@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "gregoriohc/argentum": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Argentum\\Offline\\": "src/"
+        }
+    }
+}
