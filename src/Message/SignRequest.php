@@ -1,22 +1,43 @@
-<?php namespace Argentum\Offline\Message;
-
-use Argentum\Common\Message\AbstractRequest;
+<?php
+namespace Argentum\Offline\Message;
 
 /**
  * Offline Purchase Request
  */
 class SignRequest extends AbstractRequest
 {
+    /**
+     * {@inheritDoc}
+     */
+    protected function getFunction()
+    {
+        return 'sign';
+    }
+
+    /**
+     * Get document to sign
+     *
+     * @return \Argentum\Common\Document\AbstractDocument
+     */
     public function getDocument()
     {
         return $this->getParameter('document');
     }
 
+    /**
+     * Set document to sign
+     *
+     * @param \Argentum\Common\Document\AbstractDocument $value
+     * @return SignRequest
+     */
     public function setDocument($value)
     {
         return $this->setParameter('document', $value);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function getData()
     {
         $this->validate('document');
@@ -24,16 +45,15 @@ class SignRequest extends AbstractRequest
         $data = array();
         $data['document'] = $this->getDocument();
 
-        return $data;
+        return array_merge(parent::getData(), $data);
     }
 
-    public function sendData($data)
+    /**
+     * @param array $data
+     * @return SignResponse
+     */
+    protected function createResponse($data)
     {
         return $this->response = new SignResponse($this, $data);
-    }
-
-    public function getEndpoint()
-    {
-        return '';
     }
 }

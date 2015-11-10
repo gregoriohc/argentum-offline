@@ -1,21 +1,9 @@
-<?php namespace Argentum\Offline\Message;
-
-use Argentum\Common\Message\AbstractResponse;
-use Argentum\Common\Message\ResponseInterface;
+<?php
+namespace Argentum\Offline\Message;
 
 /**
  * Offline Sign Response
  */
-class SignResponse extends AbstractResponse implements ResponseInterface
+class SignResponse extends Response
 {
-    public function isSuccessful()
-    {
-        return true;
-    }
-
-    public function getReference()
-    {
-        return false;
-    }
-
 }
