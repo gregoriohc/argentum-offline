@@ -1,4 +1,5 @@
-<?php namespace Argentum\Offline\Document;
+<?php
+namespace Argentum\Offline\Document;
 
 use Argentum\Common\Document\Invoice as CommonInvoice;
 
