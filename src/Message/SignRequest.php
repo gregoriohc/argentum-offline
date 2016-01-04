@@ -17,7 +17,7 @@ class SignRequest extends AbstractRequest
     /**
      * Get document to sign
      *
-     * @return \Argentum\Common\Document\AbstractDocument
+     * @return \Argentum\Common\Document\AbstractDocument|\Argentum\Common\Document\Ticket
      */
     public function getDocument()
     {
