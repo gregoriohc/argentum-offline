@@ -11,7 +11,7 @@
     ],
     "require": {
         "php": ">=5.4",
-        "gregoriohc/argentum-common": "~1.0"
+        "gregoriohc/argentum-common": "~1.0.10"
     },
     "require-dev": {
         "phpunit/phpunit": "4.*"
